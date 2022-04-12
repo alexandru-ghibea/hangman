@@ -19,13 +19,11 @@ print(logo)
 while True:
     chosen_word = random.choice(word_list)
     display = []
-    lives = len(chosen_word) -1
+    lives = len(chosen_word) - 1
     for letter in chosen_word:
         display.append("_")
     print(f"You have {lives} lives. Then...dead!")
     game_on = input("Ready to play Y or N: ").lower()
-    print(chosen_word)
-
     if game_on == "y":
         game_on = True
     else:
