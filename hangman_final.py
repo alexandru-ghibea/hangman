@@ -3,12 +3,6 @@ from hangman_word import word_list
 from hangman_art import logo, stages
 
 
-chosen_word = random.choice(word_list)
-display = []
-lives = len(chosen_word) - 1
-#game_on = True
-
-
 def replay():
     answer = ["Y", "N"]
     choice = input("Do you want to play again Y or N: ")
@@ -20,19 +14,23 @@ def replay():
         return False
 
 
-for letter in chosen_word:
-    display.append("_")
-
 print(logo)
-print(f"You have {lives} lives. Then...dead!")
 
 while True:
+    chosen_word = random.choice(word_list)
+    display = []
+    lives = len(chosen_word)
+    for letter in chosen_word:
+        display.append("_")
+    print(f"You have {lives} lives. Then...dead!")
     game_on = input("Ready to play Y or N: ").lower()
+    print(chosen_word)
+
     if game_on == "y":
         game_on = True
     else:
         game_on = False
-
+        break
     while game_on:
         index = 0
         guess = input("Guess a letter: ").lower()
