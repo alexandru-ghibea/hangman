@@ -1,2 +1,1 @@
-# hangman_python
-Hangman Game
+Simple game of hangman created using Python
