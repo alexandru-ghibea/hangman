@@ -52,4 +52,5 @@ while True:
             game_on = False
         print(stages[lives])
     if not replay():
+        print("Thank you for playing!")
         break
